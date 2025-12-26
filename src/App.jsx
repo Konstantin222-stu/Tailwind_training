@@ -22,10 +22,10 @@ function App() {
       <nav className="flex justify-between items-center px-6 py-4 bg-[#384b66] text-stone-50 font-sans">
           <div className="text-2xl font-bold text-blue-400">Лого</div>
           <ul class="flex gap-5 list-none m-0 p-0">
-              <li><a href="#" class="text-stone-50 no-underline py-1.5 px-3 border-4 hover:bg-[#374151]  active">Главная</a></li>
-              <li><a href="#" class="text-stone-50 no-underline py-1.5 px-3 border-4 hover:bg-[#374151] ">О нас</a></li>
-              <li><a href="#" class="text-stone-50 no-underline py-1.5 px-3 border-4 hover:bg-[#374151] ">Услуги</a></li>
-              <li><a href="#" class="text-stone-50 no-underline py-1.5 px-3 border-4 hover:bg-[#374151] ">Контакты</a></li>
+              <li><a href="#" class="text-stone-50 no-underline py-1.5 px-3 rounded-sm hover:bg-[#374151]  active">Главная</a></li>
+              <li><a href="#" class="text-stone-50 no-underline py-1.5 px-3 rounded-sm hover:bg-[#374151] ">О нас</a></li>
+              <li><a href="#" class="text-stone-50 no-underline py-1.5 px-3 rounded-sm hover:bg-[#374151] ">Услуги</a></li>
+              <li><a href="#" class="text-stone-50 no-underline py-1.5 px-3 rounded-sm hover:bg-[#374151] ">Контакты</a></li>
           </ul>
           <span>Алексей</span>
       </nav>
