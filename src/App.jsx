@@ -1,33 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="w-[300px] p-[20px] bg-[rgb(218,192,192)] rounded-[8px] font-sans">
+          <h3 className="text-2xl mb-[10px] text-[#1f2937]">Заголовок карточки</h3>
+          <p className="text-[#4f5a69] leading-[1.5] mb-[15px]">
+            Это пример простой карточки с тенью, отступами и кнопкой.
+            Попробуйте перевести её в Tailwind.
+          </p>
+          <button className="bg-[#3b82f6] text-stone-50 p-[8px 15px] rounded-[4px] border-none cursor-pointer">Подробнее</button>
       </div>
-      <p className='text-3xl text-10xl text-gray-500 font-bold underline'>Vite + React</p>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
