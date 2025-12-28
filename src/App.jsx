@@ -4,15 +4,43 @@ function App() {
   return (
     <>
       <h2>Задание 2.1</h2>
-      <div className="bg-gray-200 max-w-360 mx-auto w-4/5 block">
+      <div className="
+      bg-gray-200 
+      lg:max-w-360
+      lg:mx-auto 
+      lg:w-4/5 
+      block 
+      w-full 
+      ">
         <header className="w-full">
           <div className="bg-[url(./Banner.jpg)] h-32"></div>
-          <nav className="flex items-end -mt-15 justify-center gap-96 mb-11.5">
-            <div className="flex items-end">
+          <nav className="
+          flex
+          flex-col 
+          -mt-15 
+          pb-5 
+          mb-11.5
+          sm:flex-row 
+          sm:items-end 
+          items-center 
+          sm:justify-center 
+          sm:gap-10
+          lg:gap-56
+          xl:gap-96 
+          ">
+            <div className="
+            flex 
+            flex-col 
+            mb-3 
+            items-center 
+            sm:flex-row 
+            sm:items-end
+            lg:items-end 
+            ">
               <img className="w-32 h-32 rounded-full" src="./profile.jpg" alt="" />
               <h3 className="text-2xl font-bold">Ricardo Cooper</h3>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <button className="bg-stone-50 h-9.5 rounded-md flex items-center gap-2 pl-3.5 pr-4.5 py-2.5">
                 <img src="./Mail.svg" alt="" />
                 Message
@@ -25,7 +53,17 @@ function App() {
           </nav>
         </header>
 
-        <div className="grid grid-cols-3 gap-y-8 gap-x-8 items-center">
+        <div className="
+        grid 
+        justify-center
+        sm:grid-cols-2
+        sm:gap-y-1.5
+        sm:gap-x-1.5
+        sm:justify-items-center
+        lg:grid-cols-3 
+        lg:gap-y-8 
+        lg:gap-x-8 
+        lg:items-center">
           <div>
             <img className="rounded-lg mb-2" src="./card-1.jpg" alt="" />
             <p>id: 1</p>
@@ -52,7 +90,7 @@ function App() {
           </div>
         </div>
       </div>
-      <h2>Задание 2.1</h2>
+      {/* <h2>Задание 2.1</h2>
       <div className="bg-stone-50 max-w-360 mx-auto w-4/5 block">
         <header className="shadow-md h-20 flex items-center">
           <nav className="flex gap-5.5 w-4/5 mx-auto">
@@ -235,7 +273,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
