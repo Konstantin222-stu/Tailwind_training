@@ -234,61 +234,86 @@ text-[#3b82f6], text-[42px]
 ```
 ---
 
-### №2.Верстка по макету
+## №2.Верстка по макету
 
 Ссылка на макеты: https://www.figma.com/design/2bYk26AGVul7kLCxc1bnKr/Untitled?node-id=319-9&p=f&t=n8XUiT0X7VJUuQIv-0
 
 З задачи
 
-### №2. COMPONENTS слой - для повторяющихся компонентов 
+## №3 Адаптивность и состояния в Tailwind CSS
+### №3.1 Адаптивность
 
-```css
+Tailwind использует mobile-first подход. Проектируете сначала для мобильных, а потом адаптируете для больших экранов
 
-@layer components {
-  /* Кнопки */
-  .btn {
-    @apply px-4 py-2 rounded font-medium 
-           transition-colors duration-200 
-           focus:outline-none focus:ring-2 
-           focus:ring-offset-2;
-  }
-  
-  .btn-primary {
-    @apply btn bg-blue-600 text-white 
-           hover:bg-blue-700 
-           focus:ring-blue-500;
-  }
-  
-  .btn-secondary {
-    @apply btn bg-gray-200 text-gray-800 
-           hover:bg-gray-300 
-           focus:ring-gray-400;
-  }
-  
-  /* Карточки */
-  .card {
-    @apply bg-white rounded-lg shadow-md 
-           p-6 border border-gray-200;
-  }
-  
-  .card-hover {
-    @apply card transition-shadow duration-300 
-           hover:shadow-lg;
-  }
-  
-  /* Формы */
-  .input {
-    @apply w-full px-3 py-2 border border-gray-300 
-           rounded-md focus:outline-none 
-           focus:ring-2 focus:ring-blue-500 
-           focus:border-transparent;
-  }
-  
-  .label {
-    @apply block text-sm font-medium text-gray-700 mb-1;
-  }
-}
+|Префикс	|Размер (min-width)|Типичное устройство|
+|-----------|------------------|-------------------|
+|sm:		|640px			   |Большие телефоны   |
+|md:		|768px			   |Планшеты           |
+|lg:		|1024px			   |Ноутбуки           |
+|xl:		|1280px			   |Десктопы           |
+|2xl:		|1536px			   |Большие мониторы   |
+
+### Пример: 
+
+```html
+<div class="
+  flex flex-col      <!-- mobile: колонка -->
+  md:flex-row        <!-- tablet+: строка -->
+  p-4                <!-- mobile: padding 1rem -->
+  md:p-6             <!-- tablet+: padding 1.5rem -->
+  gap-4              <!-- mobile: gap 1rem -->
+  md:gap-8           <!-- tablet+: gap 2rem -->
+">
+  <img class="
+    w-full           <!-- mobile: 100% ширины -->
+    md:w-1/3         <!-- tablet+: 33% ширины -->
+    rounded-lg
+  " src="...">
+  <div class="
+    text-center      <!-- mobile: текст по центру -->
+    md:text-left     <!-- tablet+: текст слева -->
+  ">
+    <h2 class="
+      text-xl        <!-- mobile: текст размера xl -->
+      lg:text-2xl    <!-- desktop: текст размера 2xl -->
+    ">Заголовок</h2>
+  </div>
+</div>
 ```
+## №3.2 Псевдоклассы (Hover, Focus, Active)
+
+|Префикс	 |CSS-эквивалент|Использование      |
+|------------|--------------|-------------------|
+|hover:		 |:hover		|Наведение курсора  |
+|focus:		 |:focus		|Элемент в фокусе   |
+|active:	 |:active		|Нажатие/активация  |
+|visited:	 |:visited		|Посещенная ссылка  |
+|checked:	 |:checked		|Отмеченный чекбокс |
+|disabled:	 |:disabled		|Отключенный элемент|
+|group-hover:|.group:hover *|Внутри группы      |
+
+### Пример: 
+
+```html
+
+<button class="
+  bg-blue-500          <!-- обычный фон -->
+  hover:bg-blue-600    <!-- при наведении -->
+  active:bg-blue-700   <!-- при нажатии -->
+  focus:outline-none   <!-- убираем outline -->
+  focus:ring-2         <!-- добавляем ring при фокусе -->
+  focus:ring-blue-300  <!-- цвет ring -->
+  focus:ring-offset-2  <!-- отступ ring -->
+  transition-colors    <!-- плавный переход цветов -->
+  duration-200         <!-- длительность 200ms -->
+">
+  Нажми меня
+</button>
+```
+
+## Задание:
+Адаптировать макеты из прошлого задания
+
 ---
 
 ### №3. UTILITIES слой - для кастомных утилит
