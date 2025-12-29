@@ -90,15 +90,46 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <h2>Задание 2.1</h2>
-      <div className="bg-stone-50 max-w-360 mx-auto w-4/5 block">
-        <header className="shadow-md h-20 flex items-center">
-          <nav className="flex gap-5.5 w-4/5 mx-auto">
+      <h2>Задание 2.1</h2>
+      <div className="
+      bg-gray-200 
+      lg:max-w-360
+      lg:mx-auto 
+      lg:w-4/5 
+      block 
+      w-full">
+        <header className="
+        shadow-md 
+        xl:h-20 
+        flex 
+        items-center
+        xl:flex-row
+        flex-col
+        py-5
+        ">
+          <nav className="
+          flex 
+          flex-col
+          gap-5.5 
+          w-4/5 
+          mx-auto
+          items-center
+          sm:flex-row
+          sm:justify-between
+          md:justify-start
+          
+          ">
             <a className="no-underline flex gap-6 w-38 items-center" href="#">
               <img src="./logo.svg" alt="" />
               <p className="uppercase text-xs">Resource Center</p>
             </a>
-            <ul className="flex gap-5.5">
+            <ul className="
+            flex 
+            gap-5.5
+            flex-wrap
+            xl:flex-row
+            
+            ">
               <li>
                 <a className="no-underline uppercase text-xs" href="">
                   Blog
@@ -122,15 +153,35 @@ function App() {
             </ul>
           </nav>
         </header>
-        <div className="bg-[url(./background.jpg)] bg-contain">
-          <div className="w-189 pt-36 pl-60 pb-17 box-border">
-            <h1 className="text-5xl mb-2">
+        <div className="
+        bg-[url(./background.jpg)] 
+        bg-cover
+        ">
+          <div className="
+          w-70
+          pt-20
+          pl-5
+          pb-17 
+          mx-auto
+          sm:mx-0
+          sm:w-100
+          md:w-150
+          md:pt-36
+          md:pl-30  
+          lg:w-150 
+          box-border
+          ">
+            <h1 className="
+            text-3xl
+            xl:text-5xl 
+            mb-2
+            ">
               The <span className="text-green-600">most complete</span>
               <br />
               Photography resource.
             </h1>
             <p className="text-lg mb-25">Welcome at Template Resource. This template is packed with useful features to built out your own resource website.</p>
-            <div className="flex gap-3.5">
+            <div className="flex flex-wrap gap-3.5 justify-center sm:flex-nowrap">
               <a className="bg-[#F55F39] text-center text-stone-50 block px-3.5 pt-2.5 pb-1.5 w-fit text-2xl" href="#">
                 Visit our Blog
                 <br />
@@ -144,7 +195,18 @@ function App() {
             </div>
           </div>
         </div>
-        <footer className="flex gap-13.75 w-4/5 mx-auto py-13 relative">
+        <footer className="
+        flex 
+        flex-wrap 
+        justify-center
+        gap-13.75 
+        w-4/5 
+        mx-auto 
+        py-13 
+        relative
+        sm:justify-between
+        md:justify-start
+        ">
           <h2 className="w-32 text-3xl text-green-600 text-7">How can we help you?</h2>
           <ul>
             <li>
@@ -168,7 +230,14 @@ function App() {
               </a>
             </li>
           </ul>
-          <div className="absolute bg-[url(./background.svg)] bg-cover w-150 h-75 bottom-0 right-[-12.5%] text-stone-50 ">
+          <div className="
+          hidden 
+          lg:block 
+          absolute 
+          bg-[url(./background.svg)] 
+          bg-cover
+          w-100
+          xl:w-150 h-75 bottom-0 right-[-12.5%] text-stone-50 ">
             <div className="mt-20 pl-20">
               <h3 className="text-2xl mb-6.5">Meet our Writers</h3>
               <p className="w-76 text-sm mb-4.5">We've got a professional team of professional photographers providing you with resources.</p>
@@ -181,7 +250,7 @@ function App() {
           </div>
         </footer>
       </div>
-      <h2>Задание 2.3</h2>
+      {/* <h2>Задание 2.3</h2>
       <div className="bg-[#262627] max-w-360 mx-auto w-4/5 block overflow-hidden">
         <div className="flex mx-auto w-4/5 justify-between py-40.5">
           <p className="text-lg text-stone-50 w-114">
