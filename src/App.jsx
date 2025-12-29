@@ -250,31 +250,67 @@ function App() {
           </div>
         </footer>
       </div>
-      {/* <h2>Задание 2.3</h2>
-      <div className="bg-[#262627] max-w-360 mx-auto w-4/5 block overflow-hidden">
-        <div className="flex mx-auto w-4/5 justify-between py-40.5">
-          <p className="text-lg text-stone-50 w-114">
+      <h2>Задание 2.3</h2>
+      <div className="
+      bg-[#262627] 
+      max-w-360 
+      mx-auto 
+      block 
+      w-full
+      overflow-hidden
+      lg:max-w-360
+      lg:mx-auto 
+      lg:w-4/5 
+      ">
+        <div className="
+        flex 
+        mx-auto 
+        w-4/5 
+        py-20
+        flex-wrap
+        justify-center
+        text-center
+        lg:text-left
+        lg:flex-row
+        lg:flex-nowrap
+        lg:gap-4
+        lg:justify-between 
+        lg:py-40.5
+        ">
+          <p className="
+          text-md
+          text-stone-50 
+          mb-10
+          xl:text-lg
+          xl:w-114">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo
             diam libero vitae erat.
           </p>
-          <ul className="text-stone-50 flex gap-14.5">
+          <ul className="
+          text-stone-50 
+          flex  
+          lg:gap-14.5 
+          gap-3 
+          flex-col
+          sm:flex-row
+          sm:gap-10">
             <li>
               <p className="text-base text-center">
-                <span className="text-6xl font-bold -mb-2 block">17K</span>
+                <span className="lg:text-6xl sm:text-5xl text-4xl font-bold -mb-2 block">17K</span>
                 <br />
                 Artwork
               </p>
             </li>
             <li>
               <p className="text-base text-center">
-                <span className="text-6xl font-bold -mb-2 block">4.5K</span>
+                <span className="lg:text-6xl sm:text-5xl text-4xl font-bold -mb-2 block">4.5K</span>
                 <br />
                 Auctions
               </p>
             </li>
             <li>
               <p className="text-base text-center">
-                <span className="text-6xl font-bold -mb-2 block">23</span>
+                <span className="lg:text-6xl sm:text-5xl text-4xl font-bold -mb-2 block">23</span>
                 <br />
                 Artists
               </p>
@@ -282,18 +318,18 @@ function App() {
           </ul>
         </div>
         <div className="w-[125%] ml-[-5%] pb-21">
-          <div className="flex flex-wrap  gap-y-16 gap-x-10 ">
+          <div className="flex flex-wrap  gap-y-16 gap-x-10 justify-center lg:justify-start ">
             <img className="w-95 h-90 column" src="./image-5.jpg" alt="" />
             <img className="w-95 h-90" src="./image-6.jpg" alt="" />
             <img className="w-95 h-90" src="./image-4.jpg" alt="" />
-            <img className="w-95 h-90 ml-30" src="./image-1.jpg" alt="" />
+            <img className="w-95 h-90 xl:ml-30" src="./image-1.jpg" alt="" />
             <img className="w-95 h-90" src="./image-2.jpg" alt="" />
             <img className="w-95 h-90" src="./image-3.jpg" alt="" />
           </div>
         </div>
         <div className="bg-stone-950 pt-24 pb-30 text-stone-50">
           <h2 className="text-5xl font-bold text-center mb-12.5">Create and sell NFTs</h2>
-          <div className="flex gap-5 justify-center">
+          <div className="flex gap-5 justify-center flex-wrap">
             <div className="bg-[#262627] border-[#858586] border w-85 min-h-50 pt-9 pl-4 pb-14 box-border relative">
               <hr className="absolute w-[30%] h-1 border-[#858586] top-[14%] right-[-4%] rotate-45"/>
               <div className="bg-gray-300 w-12.5 h-12.5 rounded-full mb-3.5"></div>
@@ -315,7 +351,7 @@ function App() {
           </div>
         </div>
         <div className="w-4/5 mx-auto my-40">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 gap-x-4 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
             <div className="">
               <div className="bg-[url(./profile-2.jpg)] bg-cover h-50 mx-auto"></div>
               <div className="mt-[-15%] text-stone-50 flex flex-col items-center">
@@ -342,7 +378,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
