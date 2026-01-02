@@ -22,7 +22,7 @@ text-[#3b82f6], text-[42px]
 
 ---
 
-## Практическое упражнение  
+## Задание: 
 Переверстать блоки с чистого CSS на Tailwind.
 
 ### №1.1 Карточка
@@ -236,9 +236,10 @@ text-[#3b82f6], text-[42px]
 
 ## №2.Верстка по макету
 
-Ссылка на макеты: https://www.figma.com/design/2bYk26AGVul7kLCxc1bnKr/Untitled?node-id=319-9&p=f&t=n8XUiT0X7VJUuQIv-0
+### Задание:
 
-З задачи
+Ссылка на макеты: https://www.figma.com/design/2bYk26AGVul7kLCxc1bnKr/Untitled?node-id=319-9&p=f&t=n8XUiT0X7VJUuQIv-0
+З Макета
 
 ## №3 Адаптивность и состояния в Tailwind CSS
 ### №3.1 Адаптивность
@@ -280,7 +281,7 @@ Tailwind использует mobile-first подход. Проектирует�
   </div>
 </div>
 ```
-## №3.2 Псевдоклассы (Hover, Focus, Active)
+### №3.2 Псевдоклассы (Hover, Focus, Active)
 
 |Префикс	 |CSS-эквивалент|Использование      |
 |------------|--------------|-------------------|
@@ -311,84 +312,183 @@ Tailwind использует mobile-first подход. Проектирует�
 </button>
 ```
 
-## Задание:
+### Задание:
 Адаптировать макеты из прошлого задания
 
 ---
 
-### №3. UTILITIES слой - для кастомных утилит
+## №4. Подход костамизации css утелит 
+
+Theme variables подробнее на https://tailwindcss.com/docs/theme
+
+Переменные theme - это специальные css переменные, определяемые с помощью директивы, которые влияют на наличие классов утилиты в вашем проекте.
+Например, вы можете добавить новый цвет в проект, определив переменную темы, например: --color-mint-500
 
 ```css
-
-@layer utilities {
-  /* Кастомные утилиты */
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .text-shadow-lg {
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Анимации */
-  @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  .animate-fade-in {
-    animation: fade-in 0.3s ease-in;
-  }
-  
-  /* Кастомные варианты существующих утилит */
-  .bg-gradient-brand {
-    @apply bg-gradient-to-r from-purple-600 to-pink-600;
-  }
-  
-  /* Комплексные утилиты */
-  .scrollbar-thin {
-    scrollbar-width: thin;
-  }
-  
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-  
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    @apply bg-gray-300 rounded-full;
-  }
-  
-  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-400;
-  }
+@import "tailwindcss";
+@theme {
+  --color-mint-500: oklch(0.72 0.11 178);
 }
 ```
 
-Директива @apply - это директива, которая "встраивает" утилиты Tailwind в ваш кастомный CSS класс.
+Теперь вы можете использовать утилитарные классы:
+
+```html
+<div class="bg-mint-500">
+  <!-- ... -->
+</div>
+```
+
+### №4.1 Пространства имен в CSS-файлах 
+#### №4.1.1 с @theme--color-* - Цвета
+
+```css
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-50: #eff6ff;
+  --color-secondary: oklch(0.623 0.214 259.815);
+}
+```
+
+Используется: color: var(--color-primary), bg-primary
+
+#### №4.1.2 --spacing-* - Отступы
+
+```css
+@theme {
+  --spacing-xs: 0.5rem;
+  --spacing-13: 3.25rem;
+  --spacing-screen: 100vw;
+}
+```
+Используется: p-xs, m-13, w-screen
+
+#### №4.1.3 --font-* - Шрифты
+
+```css
+@theme {
+  --font-sans: 'Inter', system-ui;
+  --font-display: 'Poppins', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+```
+Используется: font-sans, font-display
+
+#### №4.1.4 --text-* - Размеры текста
+
+```css
+@theme {
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+}
+```
+Используется: text-xs, text-2xl
+
+#### №4.1.5 --breakpoint-* - Брейкпоинты
+
+```css
+@theme {
+  --breakpoint-xs: 480px;
+  --breakpoint-3xl: 1920px;
+}
+```
+Используется: xs:, 3xl:
+
+#### №4.1.6 --radius-* - Скругления
+
+```css
+@theme {
+  --radius-sm: 0.25rem;
+  --radius-4xl: 2rem;
+  --radius-full: 9999px;
+}
+```
+Используется: rounded-sm, rounded-4xl
+
+#### №4.1.7 --shadow-* - Тени
+
+```css
+@theme {
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+```
+Используется: shadow-sm, shadow-lg
+
+#### №4.1.8 --animate-* и @keyframes - Анимации
+
+```css
+@theme {
+  --animate-spin: spin 1s linear infinite;
+  --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+```
+
+#### №4.1.9 --blur-* - Размытие
+
+```css
+@theme {
+  --blur-sm: 4px;
+  --blur-xl: 24px;
+}
+```
+Используется: blur-sm, blur-xl
+
+### №4.2 @apply
+Также через @apply можно задавать css своства каким то блокам на парямую в файле css
+
+```css
+body{
+    @apply bg-black text-white
+}
+button{
+    @apply cursor-pointer
+}
+input{
+    @apply font-light
+}
+```
+
+### Задание: 
+
+1. Цветовая палитра:
+    * Основной цвет бренда: #4F46E5 
+    * Акцентный цвет: #10B981 
+    * Фон светлый: #F8FAFC
+    * Фон темный: #1E293B
+    * Цвет текста светлый: #334155
+    * Цвет текста темный: #F1F5F9
+
+2. Типографика:
+    * Основной шрифт: 'Inter'
+    * Заголовочный шрифт: 'Playfair Display'
+    * Моноширинный шрифт: 'JetBrains Mono'
+    * Создать кастомный размер текста --text-lead для вводных абзацев
+
+3. Отступы:
+    * Маленький отступ: 0.75rem
+    * Большой отступ: 3.5rem
+    * Создать специальный отступ для секций: 5rem
+
+4. Скругления:
+    * Маленькое скругление: 0.375rem
+    * Большое скругление: 1.5rem
+    * Полное скругление для аватарок: 9999px
+
+5. Тени:
+    * Легкая тень для карточек
 
 ---
 
-### №4 Практическое задание: cоздать систему компонентов для блога
-
-В @layer base задать стили для:
-Заголовков h1-h6
-Ссылок a
-
-В @layer components создать:
-.article-card с изображением, заголовком, описанием
-.tag для тегов статей
-
-В @layer utilities добавить:
-.text-balance для балансировки текста
-.gradient-text с градиентом
-
----
-
-### №5 Реализовать макет с использованием Tailwind
+## №5 Реализовать макет с использованием Tailwind
 ссылка: https://www.figma.com/design/ZHohpVwqROwi5gx0ZkJ5xk/Untitled?node-id=0-1&p=f&t=B7O3l4UCPMV3z1po-0
-
-
-
-
-
