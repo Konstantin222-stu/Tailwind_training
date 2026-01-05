@@ -90,7 +90,7 @@ function App() {
           </div>
         </div>
       </div>
-      <h2>Задание 2.1</h2>
+      <h2>Задание 2.2</h2>
       <div className="
       bg-gray-200 
       lg:max-w-360
@@ -317,8 +317,8 @@ function App() {
             </li>
           </ul>
         </div>
-        <div className="w-[125%] ml-[-5%] pb-21">
-          <div className="flex flex-wrap  gap-y-16 gap-x-10 justify-center lg:justify-start ">
+        <div className="xl:w-[125%] xl:ml-[-5%] pb-21">
+          <div className=" flex flex-col items-center gap-10 md:flex-wrap md:flex-row md:justify-center"> 
             <img className="w-95 h-90 column" src="./image-5.jpg" alt="" />
             <img className="w-95 h-90" src="./image-6.jpg" alt="" />
             <img className="w-95 h-90" src="./image-4.jpg" alt="" />
