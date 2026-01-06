@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <div className='border-y border-brand pt-20.25 '>
         <div className="wrap relative">
-            <h2 className='text-5xl block relative mb-21'>ОСНОВНЫЕ УСЛУГИ<div className='h-2.5 xl:w-[10%] w-40 bg-brand absolute left-[-5%] -bottom-6'></div></h2>
+            <h2 className='text-5xl block relative mb-21'>ОСНОВНЫЕ УСЛУГИ<div className='h-2.5 xl:w-[25%] w-40 bg-brand absolute left-[-13%] -bottom-6'></div></h2>
             <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 relative w-full -top-53 ">
                 <div className="border-x border-brand md:pt-54 pt-66 sm:-mb-53">
                     <img className='h-125 object-cover' src="./image1.jpg" alt="" />

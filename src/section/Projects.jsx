@@ -4,7 +4,7 @@ const Projects = () => {
   return (
     <div className=' pt-20.25 relative '>
       <div className="wrap relative">
-         <h2 className='text-5xl block relative mb-7'>НАШИ ПРОЕКТЫ<div className='h-2.5 xl:w-[10%] w-40 bg-brand absolute left-[-5%] -bottom-6'></div></h2>
+         <h2 className='text-5xl block relative mb-7'>НАШИ ПРОЕКТЫ<div className='h-2.5 xl:w-[25%] w-40 bg-brand absolute left-[-13%] -bottom-6'></div></h2>
         <div className="absolute bg-bg-accent w-4/5 h-full right-[-30%] hidden "></div>
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-10 absolute w-full  top-[40.1%] ">
             <div className="border-x border-brand w-full 2xl:h-237 sm:h-360 h-216 md:h-238 lg:h-249">
